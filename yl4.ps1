@@ -1,5 +1,29 @@
 ﻿#Enter a path to your import CSV file
 #$ADUsers = Import-csv C:\Users\Administrator\Documents\kasutajad.csv
+
+function Translit {
+    param(
+        [string] $inputString
+         )
+        $Translit = @{
+        [char] 'ä' = "a"
+        [char] 'õ' = "o"
+        [char] 'ö' = "o"
+        [char] 'ü' = "u"
+         }
+        $OutputString=""
+        foreach ($character in $inputString.ToCharArray())
+        {
+        if ($Translit[$character] -cne $Null){
+        $OutputString += $Translit[$character]
+        } else {
+            $OutputString += $character
+        }
+          }
+
+          Write-Output $OutputString
+}
+
 $users = Import-Csv C:\Users\Administrator\Documents\kasutajad.csv -Encoding Default -Delimiter ";"
 foreach ($User in $users)
 {
@@ -10,6 +34,7 @@ foreach ($User in $users)
        $Lastname    = $user.lastname
        $username = $user.FirstName + "." + $user.LastName
        $username = $username.ToLower()
+       $username = Translit($username)
        $Department =  $user.department
       # $OU           = $User.ou
 
@@ -17,7 +42,7 @@ foreach ($User in $users)
        if (Get-ADUser -F {SamAccountName -eq $username})
        {
                #If user does exist, output a warning message
-               Write-Warning "A user account $Username has already exist in Active Directory."
+               Write-Warning "Konto nimega $Username on juba ADs olemas."
        }
        else
        {
@@ -37,3 +62,4 @@ foreach ($User in $users)
 
        }
 }
+
