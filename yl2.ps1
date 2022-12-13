@@ -21,7 +21,7 @@
        Write-Host "Kasutaja on eemaldatud"
       }
  
-    Powershelli veateate asendamine
+    #Powershelli veateate asendamine
     $ErrorActionPreference = 'SilentlyContinue'
     try { NonsenseString }
     catch {
