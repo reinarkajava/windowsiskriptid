@@ -5,8 +5,11 @@ Skriptid on mõeldud nii lokaalsete kui ka domeenikasutajate lisamiseks ja eemal
 
 ## Sisu
 -skript, mis eemaldab ADDS kasutajad.
+
 -skript, mis lisab ADDS kasutajad.
+
 -skript, mis lisab lokaalsed kasutajad.
+
 -skript, mis eemaldab lokaalsed kasutajad.
 
 
