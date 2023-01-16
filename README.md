@@ -4,10 +4,10 @@
 Skriptid on mõeldud nii lokaalsete kui ka domeenikasutajate lisamiseks ja eemaldamiseks kasutades Powershelli.
 
 #### Sisu
-Kasutajaeemaldamine - Skript, mis eemaldab ADDS kasutajad olenevalt skripti sisestatavast ees ja perekonnanimest
-Kasutajalisamine - Skript, mis lisab ADDS kasutajad kasutades kasutajad.csv faili
-yl1 - Skript, mis lisab lokaalsed kasutajad olenevalt kasutaja sisestatavast ees ja perekonnanimest
-yl2 - Skript, mis lisab lokaalsed kasutajad olenevalt kasutaja sisestatavast ees ja perekonnanimest
+Kasutajaeemaldamine - Skript, mis eemaldab ADDS kasutajad
+Kasutajalisamine - Skript, mis lisab ADDS kasutajad.
+yl1 - Skript, mis lisab lokaalsed kasutajad
+yl2 - Skript, mis eemaldab lokaalsed kasutajad
 
 
 ### Nõuded
